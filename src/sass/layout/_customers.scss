@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/function' as *;
+
+.customers {
+  &-title {
+    font-family: v.$main-font;
+    font-size: rem(36);
+    letter-spacing: rem(1);
+    color: v.$black-main;
+    font-weight: v.$fw-bold;
+    margin: rem(94) auto rem(50) auto;
+  }
+
+  &-img {
+    display: flex;
+    margin: 0 0 rem(94) 0;
+    justify-content: space-between;
+  }
+
+  &-icon > svg {
+    fill: v.$icon-color;
+    border: rem(2) solid v.$icon-color;
+    border-radius: rem(7);
+    width: rem(208);
+    height: rem(102);
+    display: block;
+    padding: rem(16) rem(32) rem(16) rem(32);
+
+    transition:
+      fill v.$transition-main,
+      border v.$transition-main;
+  }
+
+  &-icon > svg:hover {
+    fill: v.$blue-main;
+    border: rem(2) solid v.$blue-main;
+  }
+}

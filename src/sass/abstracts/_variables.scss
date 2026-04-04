@@ -1,0 +1,30 @@
+$blue-main: #2196f3;
+$blue-hover: #1976d2;
+$grey-main: #757575;
+$grey-alt: #c4c4c4;
+$black-main: #212121;
+$white-main: #f5f4fa;
+$icon-color: #afb1b8;
+
+$main-font: 'Roboto', sans-serif;
+$alt-font: 'Raleway', sans-serif;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-black: 900;
+
+$max-width: 1170px;
+
+$shadow-main:
+  0 2px 1px 0 rgba(0, 0, 0, 0.2),
+  0 1px 1px 0 rgba(0, 0, 0, 0.14),
+  0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+$transition-base: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-time: 250ms;
+$transition-main: $transition-time $transition-base;
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1600px;

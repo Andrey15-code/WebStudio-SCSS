@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/function' as *;
+
+.section3 {
+  font-family: v.$main-font;
+  height: rem(480);
+  text-align: center;
+
+  &-gallery {
+    justify-content: center;
+    display: flex;
+    gap: rem(35);
+    position: relative;
+  }
+
+  &-title {
+    font-family: v.$main-font;
+    font-weight: 700;
+    font-size: rem(36);
+    color: #212121;
+    margin: 0 0 rem(50) 0;
+    letter-spacing: ls(3);
+  }
+
+  &-box {
+    position: relative;
+
+    &-item {
+      position: absolute;
+      width: 100%;
+      height: rem(70);
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(47, 48, 58, 0.8);
+      bottom: rem(2);
+      left: 0;
+      display: flex;
+      z-index: 1;
+
+      &-p {
+        font-family: 'Roboto', sans-serif;
+        font-size: rem(14);
+        color: v.$white-main;
+        font-weight: 700;
+        letter-spacing: rem(1.5);
+        text-transform: uppercase;
+      }
+    }
+
+    &-container {
+      position: relative;
+    }
+  }
+}

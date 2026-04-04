@@ -1,0 +1,102 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/function' as *;
+
+.section2 {
+  font-family: v.$main-font;
+  height: auto;
+  margin: 0 0 rem(94) 0;
+
+  &-img {
+    width: rem(70);
+    height: rem(70);
+    display: block;
+
+    &_container {
+      width: rem(270);
+      height: rem(120);
+      margin-bottom: rem(30);
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-feature {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    width: calc(100% - rem(30)/ 4);
+
+    &:nth-child(1)::before {
+      content: url('/src/assets/images/antenna1.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: v.$white-main;
+      width: 100%;
+      height: rem(120);
+
+      border-radius: rem(3);
+    }
+
+    &:nth-child(2)::before {
+      content: url('/src/assets/images/clock1.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: v.$white-main;
+      width: 100%;
+      height: rem(120);
+
+      border-radius: rem(3);
+    }
+
+    &:nth-child(3)::before {
+      content: url('/src/assets/images/diagram1.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: v.$white-main;
+      width: 100%;
+      height: rem(120);
+
+      border-radius: rem(3);
+    }
+
+    &:nth-child(4)::before {
+      content: url('/src/assets/images/astronaut1.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: v.$white-main;
+      width: 100%;
+      height: rem(120);
+
+      border-radius: rem(3);
+    }
+  }
+
+  &-title {
+    color: v.$black-main;
+    font-size: rem(14);
+    font-weight: v.$fw-bold;
+    gap: rem(30);
+    padding-top: rem(20);
+  }
+
+  &-text {
+    color: v.$grey-main;
+    font-size: rem(14);
+    line-height: 1.71;
+    font-weight: v.$fw-regular;
+    letter-spacing: ls(3);
+  }
+}
+
+.section-spetion {
+  display: flex;
+  justify-content: center;
+
+  gap: rem(30);
+  margin: rem(89) 0 0 0;
+}

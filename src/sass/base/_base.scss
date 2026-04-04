@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as v;
+
+html {
+  font-size: 14px;
+}
+
+svg {
+  display: block;
+}
+
+.container {
+  width: v.$max-width;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: v.$main-font;
+}

@@ -1,0 +1,252 @@
+@use '../abstracts/function' as *;
+@use '../abstracts/variables' as v;
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop {
+  justify-items: center;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition:
+    opacity v.$transition-main,
+    visibility v.$transition-main;
+
+  &:not(.is-hidden) .modal {
+    transform: scale(1);
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal {
+  width: rem(528);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  border-radius: rem(4);
+  background-color: v.$white-main;
+  padding: rem(40);
+
+  transform: scale(0);
+  transition: transform v.$transition-main;
+
+  .title-modal {
+    font-family: 'Roboto', sans-serif;
+    font-size: rem(20);
+    color: v.$black-main;
+    font-weight: v.$fw-bold;
+    padding-bottom: rem(12);
+  }
+
+  &-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: rem(14);
+    color: v.$grey-main;
+    font-weight: v.$fw-regular;
+    line-height: rem(24);
+
+    &-link {
+      color: v.$blue-main !important;
+      font-weight: v.$fw-regular;
+      font-family: 'Roboto', sans-serif;
+      line-height: rem(24);
+      font-size: rem(14);
+      text-decoration: underline;
+    }
+  }
+
+  &-checkbox {
+    width: rem(16);
+    height: rem(15);
+    border: rem(2) solid black;
+    accent-color: v.$blue-main;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: rem(3);
+    cursor: pointer;
+    position: relative;
+
+    &:checked {
+      background-color: v.$blue-main;
+      border-color: v.$blue-main;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: rem(4);
+        top: rem(2);
+        width: rem(4);
+        height: rem(6);
+        border: solid v.$white-main;
+        border-width: 0 rem(2) rem(2) 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &-close {
+    width: rem(200);
+    height: rem(50);
+    background-color: v.$blue-main;
+    color: v.$white-main;
+    border: none;
+    border-radius: rem(4);
+    font-family: v.$main-font;
+    font-weight: v.$fw-bold;
+    font-size: rem(16);
+    line-height: 0.53;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color v.$transition-main;
+
+    box-shadow: v.$shadow-main;
+
+    &:hover {
+      background-color: v.$blue-hover;
+    }
+  }
+
+  &-form-title {
+    font-family: v.$main-font;
+    font-size: rem(12);
+    color: v.$grey-main;
+    font-weight: 400;
+  }
+
+  &-text {
+    font-family: v.$main-font;
+    font-size: rem(14);
+    color: v.$grey-main;
+    font-weight: v.$fw-regular;
+    line-height: rem(24);
+
+    transition: border-color v.$transition-main;
+  }
+}
+
+.form {
+  &-modal {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    align-items: center;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+  }
+
+  &-input > svg {
+    width: rem(15);
+    height: rem(12);
+    position: absolute;
+    left: rem(15);
+    top: rem(14);
+  }
+
+  &-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &-input:focus-within svg {
+    fill: v.$blue-main;
+
+    transition: border v.$transition-base;
+  }
+
+  &-input > input:hover {
+    border: 1px solid v.$blue-main;
+  }
+
+  &-input > input {
+    width: rem(448);
+    height: rem(40);
+    border: rem(1) solid #21212120;
+    padding-left: rem(42);
+    border-radius: rem(4);
+  }
+}
+
+.cross {
+  border: 1px solid #00000010;
+  padding: rem(10);
+  border-radius: 50%;
+  background-color: v.$white-main;
+
+  transition:
+    border-color v.$transition-main,
+    background v.$transition-main;
+  position: absolute;
+  right: rem(10);
+  top: rem(10);
+
+  & > svg {
+    width: rem(11);
+    height: rem(11);
+    fill: #000000;
+    transition: fill v.$transition-main;
+  }
+
+  &:hover {
+    color: v.$blue-main;
+    border-color: v.$blue-main;
+  }
+
+  &:hover > svg {
+    fill: v.$blue-main;
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: rem(8.38);
+  margin: rem(25) 0 rem(25) 0;
+}
+
+#comment {
+  width: rem(448);
+  height: rem(120);
+  border: rem(1) solid #21212120;
+  padding: rem(12) rem(16) rem(12) rem(16);
+  text-align: left;
+  border-radius: rem(4);
+  color: v.$grey-main;
+
+  transition: border v.$transition-main;
+
+  &:focus {
+    border-color: v.$blue-main;
+  }
+
+  &:hover {
+    border: solid v.$blue-main;
+  }
+}
+
+input:focus {
+  border-color: v.$blue-main;
+}

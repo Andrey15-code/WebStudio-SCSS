@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/function' as *;
+
+.info {
+  justify-content: center;
+  gap: rem(30);
+  display: flex;
+  text-align: end;
+  flex-wrap: wrap;
+  margin-left: auto;
+
+
+  &-link {
+    color: #757575;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    font-size: rem(14);
+    color: #757575;
+    display: flex;
+    gap: rem(10);
+    flex-wrap: wrap;
+    align-items: center;
+    transition: color v.$transition-time v.$transition-base;
+
+    &:hover {
+      color: v.$blue-main;
+    }
+
+    & > svg {
+      width: rem(10);
+      height: rem(16);
+      fill: #757575;
+      transition: fill v.$transition-main;
+    }
+
+    &:hover > svg {
+      fill: v.$blue-main;
+    }
+
+    &:first-child > svg {
+      width: rem(16);
+      height: rem(12);
+    }
+  }
+}

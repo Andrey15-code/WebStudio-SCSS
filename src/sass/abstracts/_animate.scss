@@ -1,0 +1,11 @@
+@keyframes lineAnim {
+  0%,
+  100% {
+    width: 10%;
+    left: 50%;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+}

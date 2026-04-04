@@ -1,0 +1,88 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/function' as *;
+
+.section4 {
+  font-family: v.$main-font;
+  background-color: v.$white-main;
+  padding-bottom: rem(94);
+
+  &-title {
+    font-weight: v.$fw-bold;
+    font-size: rem(36);
+    color: v.$black-main;
+    text-align: center;
+    letter-spacing: rem(1);
+  }
+
+  &-cards {
+    justify-content: center;
+    display: flex;
+    gap: rem(30);
+  }
+
+  &-card {
+    width: calc((100% - rem(30))/4);
+    background-color: #ffffff;
+    text-align: center;
+    border-bottom-right-radius: rem(3);
+    border-bottom-left-radius: rem(3);
+    box-shadow: 0px rem(3) rem(2) -1px rgba(196, 196, 196, 0.73);
+
+    transition: box-shadow v.$transition-main;
+
+    &:hover {
+      box-shadow: 0px rem(5) rem(2) -1px rgba(196, 196, 196, 0.1);
+    }
+
+    &-title {
+      font-size: rem(16);
+      font-weight: 600;
+      color: v.$black-main;
+      margin: rem(30) 0 rem(10) 0;
+    }
+
+    &-text {
+      font-size: rem(16);
+      font-weight: v.$fw-medium;
+      color: v.$grey-main;
+    }
+  }
+}
+
+.our_team {
+  gap: rem(50);
+  display: flex;
+  flex-direction: column;
+  padding: rem(94) 0 0 0;
+}
+
+.icon-card {
+  display: flex;
+  gap: rem(10);
+  margin: rem(16) rem(32) rem(30) rem(32);
+}
+
+.icon-item-card > svg {
+  width: rem(20);
+  height: rem(20);
+  fill: v.$icon-color;
+  display: block;
+  transition: fill v.$transition-main;
+}
+
+.icon-item-card:hover > svg {
+  fill: #ffffff;
+}
+
+.icon-item-card:hover {
+  background-color: v.$blue-main;
+}
+
+.icon-item-card {
+  border-radius: rem(32);
+  padding: rem(12);
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color v.$transition-main;
+}

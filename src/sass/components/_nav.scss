@@ -1,0 +1,55 @@
+@use '../abstracts/function' as *;
+@use '../abstracts/variables' as v;
+
+.nav {
+  display: flex;
+
+  &-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .line {
+      position: relative;
+    }
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    gap: rem(50);
+    margin: 0 rem(300) 0 rem(93);
+  }
+
+  &-link {
+    font-family: v.$main-font;
+    font-size: rem(14);
+    font-weight: 500;
+    color: black;
+    transition: color v.$transition-time v.$transition-base;
+    position: relative;
+
+    &:hover {
+      color: v.$blue-main;
+    }
+  }
+}
+
+.line {
+  &-c {
+    color: v.$blue-main !important;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: rem(4);
+    background-color: v.$blue-main;
+    border-radius: rem(4);
+    animation: lineAnim 3s infinite v.$transition-base;
+  }
+}

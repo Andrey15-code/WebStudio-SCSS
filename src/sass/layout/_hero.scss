@@ -1,0 +1,52 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/function' as *;
+
+.section1 {
+  font-family: v.$main-font;
+  height: rem(600);
+  background-image:
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('/src/assets/images/section1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &-block {
+    margin: rem(200) auto rem(200) auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-title {
+    font-family: v.$main-font;
+    font-weight: 800;
+    font-size: rem(44);
+    line-height: 1.36;
+    color: v.$white-main;
+    display: flex;
+    text-align: center;
+    letter-spacing: ls(3);
+    margin-bottom: rem(30);
+  }
+
+  &-button {
+    width: rem(216);
+    height: rem(50);
+    background-color: v.$blue-main;
+    color: v.$white-main;
+    border: v.$blue-main;
+    font-family: v.$main-font;
+    font-weight: v.$fw-bold;
+    border-radius: rem(5);
+    font-size: rem(16);
+    transition: background-color v.$transition-main;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      background-color: v.$blue-hover;
+    }
+  }
+}
