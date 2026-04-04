@@ -28,7 +28,7 @@
     width: calc(100% - rem(30)/ 4);
 
     &:nth-child(1)::before {
-      content: url('/src/assets/images/antenna1.png');
+      content: url('../assets/images/antenna1.png');
       display: flex;
       justify-content: center;
       align-items: center;
@@ -40,7 +40,7 @@
     }
 
     &:nth-child(2)::before {
-      content: url('/src/assets/images/clock1.png');
+      content: url('../assets/images/clock1.png');
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,7 +52,7 @@
     }
 
     &:nth-child(3)::before {
-      content: url('/src/assets/images/diagram1.png');
+      content: url('../assets/images/diagram1.png');
       display: flex;
       justify-content: center;
       align-items: center;
@@ -64,7 +64,7 @@
     }
 
     &:nth-child(4)::before {
-      content: url('/src/assets/images/astronaut1.png');
+      content: url('../assets/images/astronaut1.png');
       display: flex;
       justify-content: center;
       align-items: center;
