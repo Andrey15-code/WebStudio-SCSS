@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     gap: rem(10);
-    width: calc(100% - rem(30)/ 4);
+    width: calc(100% - rem(30) / 4);
 
     &:nth-child(1)::before {
       content: url('../assets/images/antenna1.png');
