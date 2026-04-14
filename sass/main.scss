@@ -7,17 +7,8 @@
 @use './base/fonts';
 @use './base/base';
 
-@use './components/cards';
-@use './components/info';
-@use './components/modal';
-@use './components/header-components';
+@use './components';
 
-@use './layout/footer';
-@use './layout/header';
-@use './layout/hero';
-@use './layout/features';
-@use './layout/gallery';
-@use './layout/our_team';
-@use './layout/customers';
+@use './layout';
 
 @use './abstracts/media';
