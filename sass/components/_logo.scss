@@ -1,28 +1,10 @@
-@use '../abstracts/function' as *;
 @use '../abstracts/variables' as v;
 
 .logo {
-  display: flex;
-  align-items: center;
-  margin: rem(25) 0;
-
-  &-nav {
-    width: 100%;
-    height: 100%;
-    display: flex;
-  }
-
-  &-web {
-    color: #2196f3;
-    font-size: rem(26);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-  }
-
-  &-studio {
-    color: #2f303a;
-    font-size: rem(26);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+  &__image {
+    width: 144px;
+    height: 31px;
+    display: block;
+    margin: 25px 88px 25px 0;
   }
 }

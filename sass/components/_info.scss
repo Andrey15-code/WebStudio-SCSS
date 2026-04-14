@@ -1,45 +1,49 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/function' as *;
 
 .info {
-  justify-content: center;
-  gap: rem(30);
   display: flex;
-  text-align: end;
-  flex-wrap: wrap;
+  gap: 30px;
   margin-left: auto;
+  flex-wrap: wrap;
+  width: auto;
 
-
-  &-link {
-    color: #757575;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-    font-size: rem(14);
-    color: #757575;
+  &__link {
     display: flex;
-    gap: rem(10);
-    flex-wrap: wrap;
     align-items: center;
-    transition: color v.$transition-time v.$transition-base;
+    gap: 10px;
+    color: v.$grey-main;
+    font-weight: v.$fw-medium;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color v.$transition-main;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: v.$blue-main;
     }
-
-    & > svg {
-      width: rem(10);
-      height: rem(16);
-      fill: #757575;
-      transition: fill v.$transition-main;
-    }
-
-    &:hover > svg {
-      fill: v.$blue-main;
-    }
-
-    &:first-child > svg {
-      width: rem(16);
-      height: rem(12);
-    }
   }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.mail {
+  width: 16px;
+  height: 16px;
+  display: block;
+  transition: fill v.$transition-main;
+  fill: v.$grey-main;
+}
+
+.tel {
+  width: 10px;
+  height: 16px;
+  display: block;
+  transition: fill v.$transition-main;
+  fill: v.$grey-main;
+}
+
+.info__link:hover > svg {
+  fill: v.$blue-main;
 }

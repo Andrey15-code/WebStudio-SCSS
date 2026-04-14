@@ -1,55 +1,51 @@
-@use '../abstracts/function' as *;
 @use '../abstracts/variables' as v;
 
 .nav {
   display: flex;
+  align-items: center;
+  margin-right: 90px;
 
-  &-item {
+  &__list {
+    display: flex;
+    gap: 50px;
     height: 100%;
-    display: flex;
     align-items: center;
-    position: relative;
 
-    .line {
+    &-item {
       position: relative;
-    }
-  }
+      height: 100%;
+      align-items: center;
+      display: flex;
+      color: v.$black-main;
+      font-weight: v.$fw-medium;
+      font-family: v.$main-font;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      transition: color v.$transition-main;
 
-  &-list {
-    display: flex;
-    align-items: center;
-    gap: rem(50);
-    margin: 0 rem(300) 0 rem(93);
-  }
-
-  &-link {
-    font-family: v.$main-font;
-    font-size: rem(14);
-    font-weight: 500;
-    color: black;
-    transition: color v.$transition-time v.$transition-base;
-    position: relative;
-
-    &:hover {
-      color: v.$blue-main;
+      &:hover,
+      &:focus {
+        color: v.$blue-main;
+      }
     }
   }
 }
 
-.line {
-  &-c {
-    color: v.$blue-main !important;
-  }
+.active-page {
+  color: v.$blue-main !important;
+  width: 100%;
 
   &::after {
     content: '';
+
     position: absolute;
+    bottom: -1px;
     left: 0;
-    bottom: 0;
-    width: 0;
-    height: rem(4);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
     background-color: v.$blue-main;
-    border-radius: rem(4);
-    animation: lineAnim 3s infinite v.$transition-base;
+    transition: transform v.$transition-main;
+    animation: lineAnim 3s v.$transition-main infinite;
   }
 }

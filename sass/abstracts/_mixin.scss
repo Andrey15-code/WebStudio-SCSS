@@ -1,0 +1,19 @@
+@mixin adaptive-size($property, $min-size, $max-size) {
+  $min-width-px: 450;
+  $max-width-px: 1170;
+
+  $slope: ($max-size - $min-size) / ($max-width-px - $min-width-px);
+  $y-axis-intersection: -$min-width-px * $slope + $min-size;
+
+  #{$property}: clamp(
+    #{$min-size + px},
+    calc(#{$y-axis-intersection + px} + #{$slope * 100}vw),
+    #{$max-size + px}
+  );
+}
+
+@mixin mq($breakpoint) {
+  @media screen and (max-width: #{$breakpoint}) {
+    @content;
+  }
+}

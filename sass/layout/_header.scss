@@ -1,10 +1,17 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/function' as *;
+@use '../abstracts/mixin' as *;
 
-header {
-  border-bottom: v.$grey-alt rem(1) solid;
+.header {
+  border-bottom: 1px solid v.$grey-alt;
 
-  &-inner {
-    height: rem(80);
+  &__inner {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    align-items: center;
   }
+}
+
+.header__inner .container {
+  justify-items: space-between;
 }

@@ -1,102 +1,64 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/function' as *;
 
-.section2 {
+.spetion {
   font-family: v.$main-font;
-  height: auto;
-  margin: 0 0 rem(94) 0;
+  padding: 94px 0;
+}
 
-  &-img {
-    width: rem(70);
-    height: rem(70);
-    display: block;
+.spetion__blocks {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
 
-    &_container {
-      width: rem(270);
-      height: rem(120);
-      margin-bottom: rem(30);
-      justify-content: center;
-      display: flex;
-      align-items: center;
-    }
-  }
+.spetion__blocks-item {
+  flex-basis: calc((100% - 90px) / 4);
+  display: flex;
+  flex-direction: column;
 
-  &-feature {
+  &::before {
+    content: '';
     display: flex;
-    flex-direction: column;
-    gap: rem(10);
-    width: calc(100% - rem(30) / 4);
-
-    &:nth-child(1)::before {
-      content: url('../assets/images/antenna1.png');
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: v.$white-main;
-      width: 100%;
-      height: rem(120);
-
-      border-radius: rem(3);
-    }
-
-    &:nth-child(2)::before {
-      content: url('../assets/images/clock1.png');
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: v.$white-main;
-      width: 100%;
-      height: rem(120);
-
-      border-radius: rem(3);
-    }
-
-    &:nth-child(3)::before {
-      content: url('../assets/images/diagram1.png');
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: v.$white-main;
-      width: 100%;
-      height: rem(120);
-
-      border-radius: rem(3);
-    }
-
-    &:nth-child(4)::before {
-      content: url('../assets/images/astronaut1.png');
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: v.$white-main;
-      width: 100%;
-      height: rem(120);
-
-      border-radius: rem(3);
-    }
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  &-title {
-    color: v.$black-main;
-    font-size: rem(14);
-    font-weight: v.$fw-bold;
-    gap: rem(30);
-    padding-top: rem(20);
+  &:nth-child(1)::before {
+    background-image: url('../assets/images/antenna1.png');
   }
 
-  &-text {
-    color: v.$grey-main;
-    font-size: rem(14);
-    line-height: 1.71;
-    font-weight: v.$fw-regular;
-    letter-spacing: ls(3);
+  &:nth-child(2)::before {
+    background-image: url('../assets/images/clock1.png');
+  }
+
+  &:nth-child(3)::before {
+    background-image: url('../assets/images/diagram1.png');
+  }
+
+  &:nth-child(4)::before {
+    background-image: url('../assets/images/astronaut1.png');
   }
 }
 
-.section-spetion {
-  display: flex;
-  justify-content: center;
+.spetion__blocks-title {
+  color: v.$black-main;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
 
-  gap: rem(30);
-  margin: rem(89) 0 0 0;
+.spetion__blocks-text {
+  color: v.$grey-main;
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }

@@ -1,16 +1,16 @@
+@use './base/reset';
 @use './abstracts/variables' as v;
 @use './abstracts/animate' as *;
-@use './abstracts/function' as *;
+
 @use './abstracts/mixin' as *;
 
-@use './base/reset';
 @use './base/fonts';
 @use './base/base';
 
 @use './components/cards';
+@use './components/info';
 @use './components/modal';
 @use './components/header-components';
-@use './components/buttons';
 
 @use './layout/footer';
 @use './layout/header';
@@ -19,3 +19,5 @@
 @use './layout/gallery';
 @use './layout/our_team';
 @use './layout/customers';
+
+@use './abstracts/media';
