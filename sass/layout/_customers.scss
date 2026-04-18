@@ -1,23 +1,18 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders' as p;
 
 .customers {
-  padding: 94px 0;
+  @extend %section-spacing;
 }
 
 .customers__block-title {
+  @extend %main-section-title;
   font-family: v.$main-font;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.16;
-  text-align: center;
-  color: #212121;
-  margin-bottom: 50px;
 }
 
 .customers__block-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  @include m.flex-center($gap: 30px);
   flex-wrap: wrap;
 }
 
@@ -26,14 +21,9 @@
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include m.flex-center();
   color: #afb1b8;
-
-  transition:
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include m.transition-standard(border-color, color);
 
   svg {
     width: 106px;
@@ -43,7 +33,7 @@
 
   &:hover,
   &:focus {
-    border-color: #2196f3;
-    color: #2196f3;
+    border-color: v.$blue-main;
+    color: v.$blue-main;
   }
 }

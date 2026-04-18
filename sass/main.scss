@@ -2,6 +2,8 @@
 @use './abstracts/variables' as v;
 @use './abstracts/animate' as *;
 
+@use './abstracts/placeholders' as p;
+
 @use './abstracts/mixin' as *;
 
 @use './base/fonts';

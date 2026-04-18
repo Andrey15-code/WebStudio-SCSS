@@ -1,4 +1,6 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders' as p;
 
 .footer {
   background-color: #2f303a;
@@ -6,32 +8,25 @@
 }
 
 .footer__block {
-  display: flex;
-  align-items: baseline;
+  @include m.flex-center($justify: space-between, $align: baseline);
   width: 100%;
-  justify-content: space-between;
 }
 
 .logo-info {
   margin-right: 70px;
-}
 
-.logo-info__logo {
-  display: block;
-  margin-bottom: 20px;
-}
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
 
-.logo-info__info {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
+  &__info {
+    @include m.flex-center($direction: column, $gap: 9px, $align: flex-start);
+  }
 }
 
 .logo-info__info-address {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  color: #ffffff;
+  color: v.$white-main;
 }
 
 .logo-info__info-link {
@@ -39,27 +34,23 @@
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include m.transition-standard(color);
 
   &:hover,
   &:focus {
-    color: #2196f3;
+    color: v.$blue-main;
   }
 }
 
 .icons__title,
 .footer__form-title {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
+  @extend %small-upper-title;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
 .icons__box {
-  display: flex;
-  gap: 10px;
+  @include m.flex-center($gap: 10px);
 }
 
 .icons__box-item {
@@ -67,10 +58,8 @@
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include m.flex-center();
+  @include m.transition-standard(background-color);
 
   svg {
     width: 20px;
@@ -80,13 +69,12 @@
 
   &:hover,
   &:focus {
-    background-color: #2196f3;
+    background-color: v.$blue-main;
   }
 }
 
 .footer__form-box {
-  display: flex;
-  align-items: center;
+  @include m.flex-center($align: center);
 }
 
 .footer__form-input {
@@ -98,34 +86,24 @@
   padding-left: 16px;
   color: #ffffff;
   outline: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include m.transition-standard(border-color);
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
   }
 
   &:focus {
-    border-color: #2196f3;
+    border-color: v.$blue-main;
   }
 }
 
 .footer__form-btn {
-  min-width: 200px;
-  height: 50px;
+  @include m.button-style(10px 28px, 200px);
   margin-left: 12px;
-  background-color: #2196f3;
+  background-color: v.$blue-main;
   color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include m.transition-standard(background-color);
 
   svg {
     width: 24px;

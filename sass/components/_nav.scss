@@ -1,27 +1,27 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders' as p;
 
 .nav {
-  display: flex;
-  align-items: center;
+  @include m.flex-center();
   margin-right: 90px;
 
   &__list {
-    display: flex;
-    gap: 50px;
+    @extend %list-reset;
+    @include m.flex-center($gap: 50px);
     height: 100%;
-    align-items: center;
 
     &-item {
       position: relative;
       height: 100%;
-      align-items: center;
-      display: flex;
+      @include m.flex-center();
+      @include m.transition-standard(color);
       color: v.$black-main;
       font-weight: v.$fw-medium;
       font-family: v.$main-font;
       font-size: 14px;
       letter-spacing: 0.02em;
-      transition: color v.$transition-main;
+      text-decoration: none;
 
       &:hover,
       &:focus {
@@ -37,7 +37,6 @@
 
   &::after {
     content: '';
-
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -45,7 +44,6 @@
     height: 4px;
     border-radius: 2px;
     background-color: v.$blue-main;
-    transition: transform v.$transition-main;
     animation: lineAnim 3s v.$transition-main infinite;
   }
 }

@@ -1,23 +1,19 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders' as p;
 
 .services {
   padding-bottom: 94px;
 }
 
 .servises__block-title {
+  @extend %main-section-title;
   font-family: v.$main-font;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  color: #212121;
-  margin-bottom: 50px;
 }
 
 .gallery {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  @extend %list-reset;
+  @include m.flex-center($gap: 30px);
 }
 
 .gallery__box {
@@ -38,18 +34,13 @@
   width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include m.flex-center();
 }
 
 .gallery__box-title {
+  @extend %small-upper-title;
   font-family: v.$main-font;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   color: #ffffff;
 }

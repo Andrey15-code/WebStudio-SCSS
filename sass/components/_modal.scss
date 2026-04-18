@@ -1,8 +1,10 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders' as p;
 
-// Контейнер фону (Backdrop)
+
 .backdrop {
-  display: flex; // Змінено на flex для центрування модалки
+  display: flex; 
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -24,7 +26,7 @@
   }
 }
 
-// Модальне вікно
+
 .modal {
   position: relative;
   width: 528px;
@@ -45,7 +47,7 @@
   }
 }
 
-// Кнопка закриття (Хрестик)
+
 .modal__button-cross {
   position: absolute;
   top: 8px;
@@ -72,7 +74,7 @@
   }
 }
 
-// Заголовки форми
+
 .modal__title {
   font-weight: 700;
   font-size: 20px;
@@ -93,7 +95,7 @@
   text-align: left;
 }
 
-// Поля вводу
+
 .modal__form-item {
   position: relative;
   margin-bottom: 10px;
@@ -129,14 +131,14 @@
   }
 }
 
-// Спеціальний стиль для коментаря (textarea або input text)
+
 #comment {
   height: 120px;
   padding: 12px 16px;
-  resize: none; // якщо зміните input на textarea
+  resize: none; 
 }
 
-// Чекбокс
+
 .modal__form-box {
   display: flex;
   align-items: center;
@@ -177,7 +179,7 @@
   text-decoration: underline;
 }
 
-// Кнопка відправки
+
 .modal__form-button {
   display: block;
   margin: 0 auto;

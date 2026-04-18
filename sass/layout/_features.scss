@@ -1,26 +1,25 @@
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders' as p;
 
 .spetion {
+  @extend %section-spacing;
   font-family: v.$main-font;
-  padding: 94px 0;
 }
 
 .spetion__blocks {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  @include m.flex-center($gap: 30px);
+  align-items: flex-start;
 }
 
 .spetion__blocks-item {
-  flex-basis: calc((100% - 90px) / 4);
+  @include m.grid-layout(4, 30px);
   display: flex;
   flex-direction: column;
 
   &::before {
     content: '';
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-center();
     height: 120px;
     background-color: #f5f4fa;
     border-radius: 4px;
@@ -32,26 +31,20 @@
   &:nth-child(1)::before {
     background-image: url('../assets/images/antenna1.png');
   }
-
   &:nth-child(2)::before {
     background-image: url('../assets/images/clock1.png');
   }
-
   &:nth-child(3)::before {
     background-image: url('../assets/images/diagram1.png');
   }
-
   &:nth-child(4)::before {
     background-image: url('../assets/images/astronaut1.png');
   }
 }
 
 .spetion__blocks-title {
+  @extend %small-upper-title;
   color: v.$black-main;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
   margin-bottom: 10px;
 }
 

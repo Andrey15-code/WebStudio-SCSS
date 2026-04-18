@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/function' as *;
-@use '../abstracts/mixin' as *;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders' as p;
 
 .burger {
   display: none;

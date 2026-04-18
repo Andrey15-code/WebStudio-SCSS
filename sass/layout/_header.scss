@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as v;
-@use '../abstracts/mixin' as *;
+@use '../abstracts/mixin' as m;
+@use '../abstracts/placeholders' as p;
 
 .header {
   border-bottom: 1px solid v.$grey-alt;
@@ -15,3 +16,4 @@
 .header__inner .container {
   justify-items: space-between;
 }
+
