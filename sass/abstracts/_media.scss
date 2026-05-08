@@ -91,10 +91,14 @@
       margin: 0 auto;
       padding-bottom: 20px;
     }
+
+    &__info {
+      align-items: center;
+    }
   }
 
   .icons {
-    text-align: center;
+    text-align: right;
     padding-top: 60px;
     margin: 0 auto;
   }
