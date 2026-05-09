@@ -20,7 +20,9 @@
           <div class="nav">
             <ul class="nav__list">
               <li class="nav__list-item active-page">
-                <a href="./index.html" class="nav__list-item active-page">Студія</a>
+                <a href="./index.html" class="nav__list-item active-page"
+                  >Студія</a
+                >
               </li>
               <li class="nav__list-item">
                 <a href="./portfolio.html" class="nav__list-item">Портфоліо</a>
@@ -206,31 +208,79 @@
             <h2 class="servises__block-title">Чим ми займаємося</h2>
             <div class="gallery">
               <div class="gallery__box">
-                <img
-                  src="./assets/images/box1.jpg"
-                  alt=""
-                  class="gallery__box-image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/images/box1.webp    1x,
+                      ./assets/images/box1@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./assets/images/box1.jpg    1x,
+                      ./assets/images/box1@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./assets/images/box1.jpg"
+                    alt="jonh"
+                    class="hero__img"
+                  />
+                </picture>
                 <div class="gallery__box-item">
                   <p class="gallery__box-title">Десктопні додатки</p>
                 </div>
               </div>
               <div class="gallery__box">
-                <img
-                  src="./assets/images/box2.jpg"
-                  alt=""
-                  class="gallery__box-image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/images/box2.webp    1x,
+                      ./assets/images/box2@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./assets/images/box2.jpg    1x,
+                      ./assets/images/box2@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./assets/images/box2.jpg"
+                    alt="jonh"
+                    class="hero__img"
+                  />
+                </picture>
                 <div class="gallery__box-item">
                   <p class="gallery__box-title">Мобільні додатки</p>
                 </div>
               </div>
               <div class="gallery__box">
-                <img
-                  src="./assets/images/box3.jpg"
-                  alt=""
-                  class="gallery__box-image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/images/box3.webp    1x,
+                      ./assets/images/box3@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./assets/images/box3.jpg    1x,
+                      ./assets/images/box3@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./assets/images/box3.jpg"
+                    alt="jonh"
+                    class="hero__img"
+                  />
+                </picture>
                 <div class="gallery__box-item">
                   <p class="gallery__box-title">Дизайнерські рішення</p>
                 </div>
@@ -245,11 +295,27 @@
             <h2 class="our-team__title">Наша команда</h2>
             <div class="our-team__cards">
               <div class="our-team__card">
-                <img
-                  src="./assets/images/img.jpg"
-                  alt="Ігор Дем'яненко"
-                  class="our-team__card-image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/images/img.webp    1x,
+                      ./assets/images/img@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./assets/images/img.jpg    1x,
+                      ./assets/images/img@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./assets/images/img.jpg"
+                    alt="Ігор Дем'яненко"
+                    class="our-team__card-image"
+                  />
+                </picture>
                 <h5 class="our-team__card-title">Ігор Дем'яненко</h5>
                 <p class="our-team__card-text">Product Designer</p>
                 <div class="our-team__card-icons">
@@ -287,11 +353,27 @@
                 </div>
               </div>
               <div class="our-team__card">
-                <img
-                  src="./assets/images/img1.jpg"
-                  alt="Ольга Рєпіна"
-                  class="our-team__card-image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/images/img1.webp    1x,
+                      ./assets/images/img1@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./assets/images/img1.jpg    1x,
+                      ./assets/images/img1@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./assets/images/img1.jpg"
+                    alt="Ольга Рєпіна"
+                    class="our-team__card-image"
+                  />
+                </picture>
                 <h5 class="our-team__card-title">Ольга Рєпіна</h5>
                 <p class="our-team__card-text">Frontend Developer</p>
                 <div class="our-team__card-icons">
@@ -329,11 +411,27 @@
                 </div>
               </div>
               <div class="our-team__card">
-                <img
-                  src="./assets/images/img2.jpg"
-                  alt="Микола Тарасов"
-                  class="our-team__card-image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/images/img2.webp    1x,
+                      ./assets/images/img2@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./assets/images/img2.jpg    1x,
+                      ./assets/images/img2@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./assets/images/img2.jpg"
+                    alt="Микола Тарасов"
+                    class="our-team__card-image"
+                  />
+                </picture>
                 <h5 class="our-team__card-title">Микола Тарасов</h5>
                 <p class="our-team__card-text">Marketing</p>
                 <div class="our-team__card-icons">
@@ -371,11 +469,27 @@
                 </div>
               </div>
               <div class="our-team__card">
-                <img
-                  src="./assets/images/img3.jpg"
-                  alt="Михайло Єрмаков"
-                  class="our-team__card-image"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./assets/images/img3.webp    1x,
+                      ./assets/images/img3@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./assets/images/img3.jpg    1x,
+                      ./assets/images/img3@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./assets/images/img3.jpg"
+                    alt="Михайло Єрмаков"
+                    class="our-team__card-image"
+                  />
+                </picture>
                 <h5 class="our-team__card-title">Михайло Єрмаков</h5>
                 <p class="our-team__card-text">UI Designer</p>
                 <div class="our-team__card-icons">
